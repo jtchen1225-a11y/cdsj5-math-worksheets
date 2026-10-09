@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>澳門四校聯考 · 100 分鐘專題限時練習工作紙（校內教師專用互動講評系統）</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: radial-gradient(circle at 50% -20%, #1e293b 0%, #090d16 80%);
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px 60px;
+    }
+    .container { max-width: 1240px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 36px; }
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(225, 29, 72, 0.2);
+      border: 1px solid rgba(225, 29, 72, 0.4);
+      border-radius: 20px;
+      color: #fda4af;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .title { font-size: 2.2rem; font-weight: 900; margin-bottom: 8px; }
+    .sub { color: #94a3b8; font-size: 15px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #121929;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--tc); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+    .card-num { font-size: 12px; font-weight: 800; color: var(--tc); margin-bottom: 4px; }
+    .card-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .card-desc { font-size: 12.5px; color: #94a3b8; margin-bottom: 14px; flex: 1; line-height: 1.45; }
+    .dl-row { display: flex; gap: 6px; margin-bottom: 8px; }
+    .dl-btn {
+      flex: 1;
+      text-align: center;
+      padding: 5px 0;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      color: #cbd5e1;
+      font-size: 11.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .dl-btn:hover { background: rgba(255,255,255,0.15); color: #fff; }
+    .dl-btn.teacher { border-color: color-mix(in srgb, var(--tc) 50%, transparent); color: #fff; background: color-mix(in srgb, var(--tc) 15%, transparent); }
+    .dl-btn.teacher:hover { background: var(--tc); }
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      border-radius: 10px;
+      background: var(--tc);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 13.5px;
+      margin-top: 6px;
+    }
+    .btn:hover { filter: brightness(1.15); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge">🔒 聖若瑟教區中學第五校 · 校內教師專用教學資產</div>
+      <h1 class="title">100 分鐘專題限時練習工作紙 · 課堂互動講評系統</h1>
+      <p class="sub">全八大黃金專題 · 每卷 10 題 100 分 · 三部曲漸進式踩點講評 · 原生 SVG 互動探究 · 課堂投影專用</p>
+    </div>
+
+    <div class="grid">
+      <!-- TOPIC 01 -->
+      <div class="card" style="--tc: #2563eb;">
+        <div class="card-num">TOPIC 01</div>
+        <div class="card-title">解析幾何與圓錐曲線</div>
+        <div class="card-desc">直線與圓、橢圓/雙曲線/拋物線、切線長幾何探究、點差法中點弦</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_01_解析幾何與圓錐曲線_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_01_解析幾何與圓錐曲線_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_01_解析幾何與圓錐曲線_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_01_解析幾何與圓錐曲線_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet01.html" class="btn">進入講評簡報 →</a>
+      </div>
+
+      <!-- TOPIC 02 -->
+      <div class="card" style="--tc: #6366f1;">
+        <div class="card-num">TOPIC 02</div>
+        <div class="card-title">微積分極值與定積分應用</div>
+        <div class="card-desc">導數幾何意義、曲線切線斜率探究、單調性與極值、定積分面積</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_02_微積分極值與定積分應用_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_02_微積分極值與定積分應用_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_02_微積分極值與定積分應用_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_02_微積分極值與定積分應用_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet02.html" class="btn">進入講評簡報 →</a>
+      </div>
+
+      <!-- TOPIC 03 -->
+      <div class="card" style="--tc: #9333ea;">
+        <div class="card-num">TOPIC 03</div>
+        <div class="card-title">複數代數與複平面幾何</div>
+        <div class="card-desc">四則運算、阿根圖共軛複數實軸對稱、棣美弗定理、單位根幾何</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_03_複數代數與複平面幾何_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_03_複數代數與複平面幾何_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_03_複數代數與複平面幾何_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_03_複數代數與複平面幾何_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet03.html" class="btn">進入講評簡報 →</a>
+      </div>
+
+      <!-- TOPIC 04 -->
+      <div class="card" style="--tc: #059669;">
+        <div class="card-num">TOPIC 04</div>
+        <div class="card-title">矩陣線性方程組與數學歸納法</div>
+        <div class="card-desc">二階旋轉矩陣線性變換、高斯消元、逆矩陣、第一數學歸納法</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_04_矩陣線性方程組與數學歸納法_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_04_矩陣線性方程組與數學歸納法_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_04_矩陣線性方程組與數學歸納法_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_04_矩陣線性方程組與數學歸納法_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet04.html" class="btn">進入講評簡報 →</a>
+      </div>
+
+      <!-- TOPIC 05 -->
+      <div class="card" style="--tc: #0284c7;">
+        <div class="card-num">TOPIC 05</div>
+        <div class="card-title">立體幾何與空間向量建系</div>
+        <div class="card-desc">空間直角坐標系向量投影、三垂線定理、法向量、線面角二面角</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_05_立體幾何與空間向量建系_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_05_立體幾何與空間向量建系_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_05_立體幾何與空間向量建系_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_05_立體幾何與空間向量建系_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet05.html" class="btn">進入講評簡報 →</a>
+      </div>
+
+      <!-- TOPIC 06 -->
+      <div class="card" style="--tc: #d97706;">
+        <div class="card-num">TOPIC 06</div>
+        <div class="card-title">三角函數解三角形與平面幾何</div>
+        <div class="card-desc">正弦定理外接圓直徑不變性、餘弦定理、三角恆等式、面積最值</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_06_三角函數解三角形與平面幾何_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_06_三角函數解三角形與平面幾何_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_06_三角函數解三角形與平面幾何_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_06_三角函數解三角形與平面幾何_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet06.html" class="btn">進入講評簡報 →</a>
+      </div>
+
+      <!-- TOPIC 07 -->
+      <div class="card" style="--tc: #e11d48;">
+        <div class="card-num">TOPIC 07</div>
+        <div class="card-title">數列求和與代數不等式</div>
+        <div class="card-desc">等差等比數列散點趨勢、錯位相減、裂項相消、柯西與均值不等式</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_07_數列求和與代數不等式_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_07_數列求和與代數不等式_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_07_數列求和與代數不等式_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_07_數列求和與代數不等式_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet07.html" class="btn">進入講評簡報 →</a>
+      </div>
+
+      <!-- TOPIC 08 -->
+      <div class="card" style="--tc: #4f46e5;">
+        <div class="card-num">TOPIC 08</div>
+        <div class="card-title">計數原理二項式定理與概率統計</div>
+        <div class="card-desc">二項式展開係數楊輝三角直方圖、排列組合、超幾何分佈、期望方差</div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_學生版.docx" download class="dl-btn">📄 學生 Word</a>
+          <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_教師版.docx" download class="dl-btn teacher">📘 教師 Word</a>
+        </div>
+        <div class="dl-row">
+          <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_學生版.pdf" download class="dl-btn">📑 學生 PDF</a>
+          <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_教師版.pdf" download class="dl-btn teacher">📕 教師 PDF</a>
+        </div>
+        <a href="worksheet08.html" class="btn">進入講評簡報 →</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topic 08: 計數原理二項式定理與概率統計 · 100分鐘限時練習工作紙課堂互動講評</title>
+  <meta name="description" content="澳門四高校聯合入學考試 · 專題突破 100 分鐘限時練習工作紙（學生實戰與教師講評版）" />
+  <link rel="stylesheet" href="style.css?v=20261009" />
+  <style>
+    :root {
+      --ct: #4f46e5;
+    }
+    .portal-nav-btn:hover {
+      background: rgba(255,255,255,0.18) !important;
+      color: #fff !important;
+      transform: translateY(-1px);
+    }
+    .topic-pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .download-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .download-badge:hover {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' },
+      startup: { typeset: false }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+</head>
+<body>
+  <!-- 封面 -->
+  <section id="cover" class="cover" style="background: linear-gradient(180deg, #090d16 0%, #111827 100%);">
+    <div class="cover-top-bar" style="display:flex; justify-content:space-between; align-items:center; width:100%; max-width:1200px; padding:16px 24px;">
+      <a href="index.html" class="portal-nav-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:8px 18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.22); border-radius:24px; color:#e2e8f0; font-size:13px; font-weight:700; transition:all .2s;">
+        ‹ 回 8 大專題總覽 (首頁)
+      </a>
+      <div style="display:flex; gap:10px;">
+        <a href="https://www.daydaystudy.top/jae" target="_blank" class="portal-nav-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:8px 18px; background:rgba(255, 255, 255, 0.1); border:1px solid #4f46e5; border-radius:24px; color:#fff; font-size:13px; font-weight:700; transition:all .2s;">
+          🌌 歷屆真題專題
+        </a>
+        <button class="cover-teacher-btn" id="coverTeacherBtn" title="教師專用：設定課堂開放進度">⚙️ 課堂進度控制</button>
+      </div>
+    </div>
+    
+    <div class="cover-inner" style="max-width:980px; padding-top:10px;">
+      <div style="display:inline-flex; align-items:center; gap:8px; padding:4px 14px; background:rgba(255, 255, 255, 0.08); border:1px solid #4f46e5; border-radius:20px; font-size:13px; color:#cbd5e1; margin-bottom:12px;">
+        <span>📝</span> 澳門四高校聯合入學考試 · 專題突破 100 分鐘限時練習工作紙
+      </div>
+      
+      <h1 class="cover-title" style="margin-bottom:8px;">
+        Topic 08<br>
+        <span style="font-size:0.75em; color:#4f46e5; text-shadow:0 0 20px #4f46e555;">計數原理二項式定理與概率統計</span>
+      </h1>
+      
+      <p class="cover-sub" style="font-size:14.5px; color:#94a3b8; max-width:800px; margin:0 auto 16px;">
+        建議作答時間：<b>100 分鐘</b> · 試卷滿分：<b>100 分</b> · 共 <b>10 道</b>精選原創梯級試題<br>
+        選擇題 6 道 (30分) + 簡答計算題 2 道 (30分) + 高階壓軸題 2 道 (40分)<br>
+        一頁一題 · 三部曲漸進揭曉 · 原生動態探究 · 官方 M/A/B 踩點標準評分
+      </p>
+
+      <!-- 快速切換到其他專題工作紙 -->
+      <div style="margin: 10px 0 20px; display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
+        <a href="worksheet01.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:rgba(255,255,255,0.06);color:#94a3b8;border:1px solid rgba(255,255,255,0.15);" title="Topic 01: 解析幾何與圓錐曲線">T01 解析幾何與圓錐曲線</a>
+<a href="worksheet02.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:rgba(255,255,255,0.06);color:#94a3b8;border:1px solid rgba(255,255,255,0.15);" title="Topic 02: 微積分極值與定積分應用">T02 微積分極值與定積分應用</a>
+<a href="worksheet03.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:rgba(255,255,255,0.06);color:#94a3b8;border:1px solid rgba(255,255,255,0.15);" title="Topic 03: 複數代數與複平面幾何">T03 複數代數與複平面幾何</a>
+<a href="worksheet04.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:rgba(255,255,255,0.06);color:#94a3b8;border:1px solid rgba(255,255,255,0.15);" title="Topic 04: 矩陣線性方程組與數學歸納法">T04 矩陣線性方程組與數學歸納法</a>
+<a href="worksheet05.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:rgba(255,255,255,0.06);color:#94a3b8;border:1px solid rgba(255,255,255,0.15);" title="Topic 05: 立體幾何與空間向量建系">T05 立體幾何與空間向量建系</a>
+<a href="worksheet06.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:rgba(255,255,255,0.06);color:#94a3b8;border:1px solid rgba(255,255,255,0.15);" title="Topic 06: 三角函數解三角形與平面幾何">T06 三角函數解三角形與平面幾何</a>
+<a href="worksheet07.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:rgba(255,255,255,0.06);color:#94a3b8;border:1px solid rgba(255,255,255,0.15);" title="Topic 07: 數列求和與代數不等式">T07 數列求和與代數不等式</a>
+<a href="worksheet08.html" class="topic-pill" style="display:inline-block;padding:5px 12px;border-radius:16px;text-decoration:none;font-size:12px;transition:all .2s;background:#4f46e5;color:#fff;border-color:#4f46e5;font-weight:700;" title="Topic 08: 計數原理二項式定理與概率統計">T08 計數原理二項式定理與概率統計</a>
+      </div>
+
+      <!-- 檔案下載專區 -->
+      <div style="margin: 0 auto 20px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+        <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_學生版.docx" download class="download-badge" title="下載包含答題線框與排版的學生練習 Word 檔">
+          📄 下載學生版 Word (.docx)
+        </a>
+        <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_教師版.docx" download class="download-badge" style="border-color:#4f46e5; background:#4f46e522; color:#fff;" title="下載含分步踩分細則與干擾項剖析的教師 Word 檔">
+          📘 下載教師版 Word (.docx)
+        </a>
+        <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_學生版.pdf" download class="download-badge" title="下載學生實戰版高清晰度 PDF 檔">
+          📑 學生版 PDF
+        </a>
+        <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_教師版.pdf" download class="download-badge" style="border-color:#4f46e5; background:#4f46e522; color:#fff;" title="下載教師詳解版高清晰度 PDF 檔">
+          📕 教師版 PDF
+        </a>
+      </div>
+
+      <div class="cover-chapters" id="coverChapters"></div>
+      <button class="cover-start" id="startBtn" style="background:#4f46e5; box-shadow:0 4px 16px #4f46e566;">開始課堂互動講評 →</button>
+      <p class="cover-hint">用 ← → 鍵推進三部曲 · K 鍵展開考點 · A 鍵展開解答 · Q 鍵放大題目 · 支援雷射筆(L)與畫筆(P)</p>
+    </div>
+  </section>
+
+  <!-- 主體舞台 -->
+  <div id="app" class="app hidden">
+    <!-- 頂部列 -->
+    <header class="topbar">
+      <div style="display:flex; align-items:center; gap:6px;">
+        <a href="index.html" class="portal-nav-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:6px 12px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:18px; color:#cbd5e1; font-size:12px; font-weight:700;">
+          ‹ 專題總覽
+        </a>
+        <button class="home-btn" id="homeBtn" title="回工作紙封面" style="margin-left:4px;">✦ 工作紙封面</button>
+      </div>
+      <div class="crumb" id="crumb"></div>
+      <div class="top-actions">
+        <a href="https://www.daydaystudy.top/jae" target="_blank" class="ghost-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px; border-color:#4f46e5;" title="切換至歷屆真題專題">🌌 真題專題</a>
+        <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_學生版.docx" download class="ghost-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px;" title="下載學生版 Word">📄 學生版</a>
+        <a href="downloads/TOPIC_08_計數原理二項式定理與概率統計_100分鐘限時練習工作紙_教師版.docx" download class="ghost-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px;" title="下載教師版 Word">📘 教師版</a>
+        <button class="ghost-btn teacher-ctrl-btn" id="topTeacherBtn" title="課堂開放進度控制">⚙️ 課堂進度控制</button>
+        <button class="ghost-btn" id="tocToggle" title="目錄">☰ 目錄</button>
+      </div>
+    </header>
+
+    <div class="body">
+      <!-- 目錄側欄 -->
+      <aside class="toc" id="toc"></aside>
+
+      <!-- 舞台 -->
+      <main class="stage">
+        <div class="slide" id="slide"></div>
+
+        <!-- 底部控制列 -->
+        <div class="controlbar">
+          <button class="nav-btn" id="prevBtn">‹ 上一頁</button>
+          <div class="progress">
+            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+            <span class="progress-text" id="progressText">1 / 1</span>
+          </div>
+          <button class="nav-btn" id="nextBtn">下一頁 ›</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- 授課教具：畫筆畫布、雷射點、浮動工具列 -->
+    <canvas id="penCanvas" class="pen-canvas"></canvas>
+    <div id="laserDot" class="laser-dot hidden"></div>
+    <div id="dock" class="dock">
+      <button class="dbtn" id="dkSidebar" title="收合／展開側欄">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="9" y1="4" x2="9" y2="20"/></svg>
+      </button>
+      <button class="dbtn" id="dkPrev" title="上一頁 (←)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 5 8 12 15 19"/></svg>
+      </button>
+      <button class="dbtn" id="dkNext" title="下一頁 (→)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg>
+      </button>
+      <div class="dsep"></div>
+      <button class="dbtn" id="dkLaser" title="雷射筆 (L)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg>
+      </button>
+      <button class="dbtn" id="dkPen" title="畫筆 (P)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+      </button>
+      <div class="dcolors hidden" id="dkColors">
+        <button class="dcolor active" data-c="#e11d48" style="--sc:#e11d48" title="紅"></button>
+        <button class="dcolor" data-c="#2563eb" style="--sc:#2563eb" title="藍"></button>
+        <button class="dcolor" data-c="#059669" style="--sc:#059669" title="綠"></button>
+        <button class="dcolor" data-c="#f59e0b" style="--sc:#f59e0b" title="黃"></button>
+        <button class="dcolor" data-c="#111827" style="--sc:#111827" title="黑"></button>
+        <button class="dbtn derase" id="dkErase" title="橡皮擦">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l7-7 6 6-4 4H8z"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
+        </button>
+      </div>
+      <button class="dbtn" id="dkClear" title="清除筆跡 (C)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 21 6"/><path d="M8 6V4h8v2"/><path d="M6 6l1 14h10l1-14"/></svg>
+      </button>
+      <div class="dsep"></div>
+      <button class="dbtn" id="dkFull" title="全螢幕">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- 教師身分驗證 PIN 碼彈窗 -->
+  <div id="pinModal" class="modal-overlay hidden">
+    <div class="modal-card pin-card">
+      <div class="modal-head">
+        <div class="modal-title">🔐 教師身分驗證</div>
+        <button class="modal-close" id="pinCloseBtn">✕</button>
+      </div>
+      <div class="pin-body">
+        <p class="pin-desc">請輸入教師管理 PIN 碼（預設：<b>8888</b>），以切換課堂進度與試卷開放權限：</p>
+        <div class="pin-input-row">
+          <input type="password" id="pinInput" maxlength="8" placeholder="請輸入 4 位數 PIN 碼" autocomplete="off" />
+          <button class="btn-primary" id="pinSubmitBtn">進入面板</button>
+        </div>
+        <div class="pin-err hidden" id="pinError">⚠️ PIN 碼不正確，請重新輸入（預設為 8888）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 課堂開放進度控制教師面板 -->
+  <div id="teacherModal" class="modal-overlay hidden">
+    <div class="modal-card teacher-card">
+      <div class="modal-head">
+        <div class="modal-title">⚙️ 工作紙開放進度控制</div>
+        <button class="modal-close" id="teacherCloseBtn">✕</button>
+      </div>
+      <div class="teacher-body">
+        <div class="teacher-tip">
+          💡 <b>以學生進度為第一原則</b>：僅勾選當前課堂開放的 Part，學生開啟後僅能查看許可部分，其餘題目與解答隱藏。
+        </div>
+
+        <div class="preset-section">
+          <div class="section-label">⚡ 快速進度選取：</div>
+          <div class="preset-grid">
+            <button class="preset-btn" data-preset="all">【全部開放 (10 題)】</button>
+            <button class="preset-btn preset-clear" data-preset="none">【全部清空】</button>
+          </div>
+        </div>
+
+        <div class="papers-section">
+          <div class="papers-header">
+            <div class="section-label">📋 工作紙題庫自由勾選：</div>
+            <span class="selected-count" id="selectedCountBadge">已選 0 卷 (0 題)</span>
+          </div>
+          <div class="paper-year-grid" id="paperCheckboxContainer"></div>
+        </div>
+
+        <div class="teacher-actions">
+          <button class="btn-action btn-qr" id="btnShowQr"><span>📱 大螢幕 QR 碼</span></button>
+          <button class="btn-action btn-copy" id="btnCopyStudentUrl"><span>📋 複製學生網址</span></button>
+          <button class="btn-action btn-save" id="btnSaveApply"><span>💾 儲存並在當前生效</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 大螢幕 QR 碼視窗 -->
+  <div id="qrModal" class="modal-overlay hidden">
+    <div class="modal-card qr-card">
+      <div class="modal-head">
+        <div class="modal-title">📱 學生專用大螢幕掃碼同步</div>
+        <button class="modal-close" id="qrCloseBtn">✕</button>
+      </div>
+      <div class="qr-body">
+        <p class="qr-sub">請同學使用 iPad 或手機相機掃描，立即進入本練習工作紙：</p>
+        <div class="qr-code-box" id="qrCodeContainer"></div>
+        <div class="qr-info-box">
+          <div class="qr-info-papers" id="qrActivePapersText">已開放試卷：載入中...</div>
+          <div class="qr-url-row">
+            <input type="text" id="qrUrlInput" readonly />
+            <button class="btn-sm" id="btnCopyQrUrl">複製連結</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 全螢幕放大彈窗 -->
+  <div id="zoomModal" class="zoom-modal hidden">
+    <div class="zoom-bar hidden" id="zoomBar">
+      <div class="zoom-badge" id="zoomBadge">放大檢視</div>
+      <button class="zoom-btn" id="zoomSol" style="display:none;">顯示解答</button>
+      <button class="zoom-btn zoom-x" id="zoomClose" title="關閉放大 (Esc)">✕ 關閉</button>
+    </div>
+    <div class="zoom-body" id="zoomBody"></div>
+  </div>
+
+  <!-- Toast 提示容器 -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- 純前端模組與題庫載入 -->
+  <script src="qrcode.min.js?v=20261009"></script>
+  <script src="svg.js?v=20261009"></script>
+  <script src="ch-ws-topic08.js?v=20261009"></script>
+  <script src="engine.js?v=20261009"></script>
+</body>
+</html>
